@@ -204,4 +204,3 @@ Console.WriteLine(Container<int>.InstanceCount);    // 1
 - ✅ Covered: Generic classes, interfaces, methods, delegates, constraints, events, static members, and edge cases.
 - 🧠 Reinforced type safety, reuse, and performance via generics.
 - 📂 All code organized per module with file paths for easy reference.
-
