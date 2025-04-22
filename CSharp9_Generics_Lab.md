@@ -93,6 +93,18 @@ public class GenericRepository<T> where T : IEntity
 }
 ```
 
+### 📁 `Program.cs`
+```csharp
+var employeeRepository = new GenericRepository<Employee>();
+employeeRepository.Add(new Employee { FirstName = "Julia" });
+employeeRepository.Add(new Employee { FirstName = "Anna" });
+employeeRepository.Add(new Employee { FirstName = "Thomas" });
+
+employeeRepository.Save();
+
+var employee = employeeRepository.GetById(2);
+Console.WriteLine($"Employee with Id 2: {employee.FirstName}");
+
 ---
 
 ## 📦 Module 3: Working with Generic Interfaces
