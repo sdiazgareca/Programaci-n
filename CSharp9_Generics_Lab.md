@@ -132,6 +132,22 @@ public interface IRepository<T> : IReadRepository<T>, IWriteRepository<T>
 
 ---
 
+### 📁 `WiredBrainCoffee.StorageApp/Program.cs`
+
+```csharp
+// Usando ListRepository con interfaces genéricas
+IWriteRepository<Employee> employeeRepo = new ListRepository<Employee>();
+employeeRepo.Add(new Employee { FirstName = "Julia" });
+employeeRepo.Add(new Employee { FirstName = "Anna" });
+employeeRepo.Save();
+
+IReadRepository<Employee> readRepo = (IReadRepository<Employee>)employeeRepo;
+foreach (var employee in readRepo.GetAll())
+{
+    Console.WriteLine($"Read: {employee.FirstName}");
+}
+```
+
 ## 📦 Module 4: Creating Generic Methods and Delegates
 
 ### 🔹 Concept
